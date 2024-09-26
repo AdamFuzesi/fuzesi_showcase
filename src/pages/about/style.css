@@ -1,0 +1,200 @@
+.sec_sp {
+    margin-bottom: calc(3rem + 5.128vw)
+}
+
+.table td,
+.table th {
+    color: var(--text-color);
+}
+
+.t_border {
+    border-color: var(--text-color) !important;
+}
+
+.progress-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 15px 0 20px;
+    font-family: 'Raleway';
+}
+
+
+/* Could remove, might not look as good UI wise */
+
+.flags {
+  margin-left: 60px; 
+}
+
+.flag-image {
+  width: 48px;       
+  height: auto;
+  margin-left: 200px; 
+  vertical-align: middle;
+}
+
+.flag-image-can {
+  width: 55px;    
+  height: 32px;
+  margin-left: 20px;    
+  vertical-align: middle; 
+}
+
+
+.skills-scroll-container {
+  overflow-x: hidden; 
+  overflow-y: hidden;
+  white-space: nowrap;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.skills-container {
+  margin-top: 80px;
+  display: inline-block;
+}
+
+.skill-item {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  margin-right: 80px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.skill-image {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.skill-name {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.skill-item:hover .skill-name {
+  display: block;
+}
+
+.skills-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.skills-scroll-container {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
+.progress {
+    height: 5px;
+    background: var(--secondary);
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 30px;
+    overflow: visible;
+}
+
+.progress .progress-bar {
+    position: relative;
+    background: var(--text-color);
+    animation: animate-positive 2s;
+    overflow: visible;
+    opacity: 0.9;
+}
+
+.progress .progress-value {
+    position: absolute;
+    top: -30px;
+    right: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    font-style: italic;
+    color: var(--text-color);
+}
+
+@-webkit-keyframes animate-positive {
+    0% {
+        width: 0%;
+    }
+}
+
+@keyframes animate-positive {
+    0% {
+        width: 0%;
+    }
+}
+
+.section-title {
+    font-size: 45px;
+}
+
+.service__title {
+    padding: 8px 0;
+    border-bottom: solid 2px var(--secondary-color);
+}
+
+.service-section .service-category-title {
+    padding-bottom: 4px;
+}
+
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}
+
+.project-row {
+  margin-top: 50px;      
+  margin-bottom: 50px; 
+}
+  
+  .project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+
+    box-shadow: 0 60px 80px rgba(0, 0, 0, 0.5);
+    /* change this for the mobile view perspective to make the shadows not cast over the title */
+  }
+  
+  .project-text {
+    padding-left: 20px;
+  }
+  
+  @media (max-width: 767px) {
+    .project-text {
+      padding-left: 0;
+      margin-top: 20px;
+    }
+  }
