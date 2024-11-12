@@ -112,7 +112,7 @@ const services = [{
     },
     {
         title: "Tennis ML Analyzer/Coach | Python, YOLOv8, Pytorch, Flask ",
-        description: "Computer-vision based tennis analysis software using YOLOv8 and PyTorch, creating models with custom image datasets for enhanced object detection and tracking in video streams. Trained a CNN to extract keypoints, implemented complex tracking algorithms, and utilized OpenCV for robust video processing. Fask-based web interface for user-driven video analysis.",
+        description: "Computer-vision based tennis analysis software using YOLOv8 and PyTorch, creating models with custom image datasets for enhanced object detection and tracking in video streams. Trained a CNN to extract keypoints, implemented complex tracking algorithms, and utilized OpenCV for robust video processing. Flask-based web interface for user-driven video analysis.",
         image: "images/tennisML.png"
     },
     {
