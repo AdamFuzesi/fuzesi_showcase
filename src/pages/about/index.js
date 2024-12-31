@@ -152,7 +152,7 @@ export const About = () => {
               <div className="project-text">
                 <h5 className="service__title">{data.title}</h5>
                 <p className="service_desc">{data.description}</p>
-                        {/* Conditionally render the "Learn More" button if a link is provided */}
+                        {/* conditionally renders the learn more button if a links there */}
                 {data.link && (
                   <a
                     href={data.link}
