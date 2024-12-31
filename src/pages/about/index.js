@@ -11,6 +11,18 @@ import {
 } from "../../content_option";
 // All easy to change from the content_option.js file 
 
+/*
+TODO:
+
+- Add portion for the redbull case comp stuff 
+- Add a more in depth for the Kickit stuff and the side business work 
+- Add portion for the ICPC programming team 
+- Add a portion for photography
+- Add a little game 
+
+
+*/
+
 export const About = () => {
 
   const scrollRef = useRef(null);
@@ -140,6 +152,17 @@ export const About = () => {
               <div className="project-text">
                 <h5 className="service__title">{data.title}</h5>
                 <p className="service_desc">{data.description}</p>
+                        {/* Conditionally render the "Learn More" button if a link is provided */}
+                {data.link && (
+                  <a
+                    href={data.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary"
+                  >
+                    Learn More
+                  </a>
+                )}
               </div>
             </Col>
           </Row>

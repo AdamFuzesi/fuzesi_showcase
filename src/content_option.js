@@ -76,10 +76,6 @@ const skills = [{
         image: "/images/c.png"
     },
     {
-        name: "C#",
-        image: "/images/cSharp.png"
-    }, 
-    {
         name: "Swift",
         image: "/images/swift.png"
     },
@@ -109,7 +105,19 @@ const skills = [{
 const services = [{
         title: "Kickit Web Dev | React, Typescript, GraphQL, Wordpress ",
         description: "Co-founded a web development venture, enhancing SEO through Server-Side Rendering. Developed a streamlined pipeline for custom websites using React and WordPress, and led e-commerce integrations using Node.js with Shopify's GraphQL API. Currently catering to 5 businesses across Canada.",
-        image: "images/kickit.png"
+        image: "images/kickit.png",
+        link: "https://www.kickitweb.ca/"
+    },
+    {
+        title: "RedBull Basement Team Canada | UI Designer",
+        description: "Co-led UI design and front-end development for Estate Lynx, Team Canada’s finalist entry in the RedBull Basement global pitch competition in Japan. The AI-powered platform provides real-time listings, key metrics, and personalized insights, making real estate investment accessible for novices. After the competition, I continued as a front-end developer, in preparation for launch. ",
+        image: "images/redbullGood.png",
+        link: "https://www.redbull.com/ca-en/events/red-bull-basement-canada/red-bull-basement-canada-winners"
+    },
+    {
+        title: "Dune Yourself (Coming soon) | React + Vite, AWS",
+        description: "A React-based application that prompts users to upload an image and complete a questionnaire inspired by the Dune universe. Leveraging AI and canonical lore, my program then generates a personalized character—from appearance to backstory, seamlessly integrating the new persona into established Dune lore. The result is a dynamic, lore rich narrative uniquely tailored to each user’s choices and image input!",
+        image: "images/dune.png"
     },
     {
         title: "Tennis ML Analyzer/Coach | Python, YOLOv8, Pytorch, Flask ",
@@ -122,11 +130,24 @@ const services = [{
         image: "images/cachingProj.png"
     },
     {
+        title: "Sequestration Model Nasa Space Apps | Python, Flask, JSON",
+        description: "Developed for the NASA Space Apps Hackathon, web app based sequestration model enables users to explore historical carbon emissions and sequestration potential data across Canada. Using choropleth layers and heatmaps, the platform provides an interactive map based visualization of carbon dynamics in various provinces. Additionally, it highlights algae blooms in Alberta, illustrating localized sequestration potential.",
+        image: "images/spaceApps.png",
+        link: "https://algaeandco2.up.railway.app/"
+    },
+    {
+        title: "Challenger | Swift, SwiftUI, AWS",
+        description: "Currently in the early stages of development, I'm very excited to introduce Challengers, an iOS application designed to connect solo-sport players and introduce a competitive edge to casual community games. Key features include local matchmaking, progress tracking, facility and court bookings, as well as community-wide win/loss leaderboards, all aimed at fostering engaging and organized events for athletes of every level, bringing a nice competitive edge back casual players.",
+        image: "images/challenger.png"
+    },
+    {
         title: "A* Algorithm Visualizer | Python, Pygame ",
         description: "Developed an interactive pathfinding algorithm visualizer in Python, using the PyGame library to create a dynamic simulation environment. Program features user-customizable parameters, enabling the adjustment of start and end points, and the placement of obstacles within the grid.",
-        image: "images/aStarVisualizer.png"
+        image: "images/aStarVisualizer.png",
+        link: "https://github.com/AdamFuzesi/A-Visualizer"
 
     }
+    // add new sections and update based off the best projects to showcase
 ];
 
 const dataportfolio = [{
