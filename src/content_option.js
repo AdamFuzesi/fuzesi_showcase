@@ -15,13 +15,13 @@ const introdata = {
         fifth: "BCS student minoring in Mathematics and Economics"
     },
     description: "Get to know a little about me...",
-    intro_img_url: "/images/IMG_3066.jpg",
+    intro_img_url: "/images/evenBetterStudious.png",
     // changed based on the use case to showcase and make sure it matches it based off the animation
 };
 
 const dataabout = {
     title: "A bit about myself...",
-    aboutme: "Currently in my third year at Dalhousie University studying Computer Science with minors in Mathematics and Economics, I also serve as the Bachelor of Computer Science Representative for my faculty. My software engineering journey began early in high school, developing Python scripts and applications for various businesses or personal use, and has since expanded to include significant contributions to open-source projects, competitive programming, and professional work as a cloud engineer intern. Beyond programming, I'm passionate about competitive Tennis and Photography, which gives me a creative and disciplined outlet away from the screen. Committed to my continuous learning field, I actively enjoy pursuing new certifications and continuously work on new projects, constantly seeking to enhance my skills and stay ahead in the ever-evolving tech landscape!",
+    aboutme: "Currently in my third year at Dalhousie University studying Computer Science with minors in Mathematics and Economics, I also serve as the Bachelor of Computer Science Representative for my faculty. My software engineering journey began early in high school, developing Python scripts and applications for various businesses or personal use, and has since expanded to include significant contributions to open-source projects, competitive programming, and professional work as a cloud engineer intern. Beyond programming, I'm passionate about competitive Tennis and Photography, which gives me a creative and disciplined outlet away from the screen. Committed to my continuous learning field, I actively enjoy pursuing new certifications, practicing with my fellow competitive programming teammates for the ICPC, and continuously work on new projects, constantly seeking to enhance my skills and stay ahead in the ever-evolving tech landscape!",
 };
 const worktimeline = [{
         jobtitle: "Cloud Engineer ",

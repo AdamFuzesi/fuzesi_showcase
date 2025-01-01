@@ -46,7 +46,7 @@ export const About = () => {
         scrollContainer.scrollLeft = scrollAmount;
       }
     }, 10); 
-    // sliding speed value do NOT put over 40 that shi becomes whack
+    // sliding speed value do NOT put over 40 
     return () => clearInterval(scrollInterval);
   }, []);
 
@@ -109,6 +109,7 @@ export const About = () => {
             </table>
           </Col>
         </Row>
+        
         <Row className="mb-5 mt-3 pt-md-3">
           <Col lg="8">
             <hr className="t_border my-4 ml-0 text-left" />
