@@ -121,13 +121,19 @@ const services = [{
     },
     {
         title: "Tennis ML Analyzer/Coach | Python, YOLOv8, Pytorch, Flask ",
-        description: "Computer-vision based tennis analysis software using YOLOv8 and PyTorch, creating models with custom image datasets for enhanced object detection and tracking in video streams. Trained a CNN to extract keypoints, implemented complex tracking algorithms, and utilized OpenCV for robust video processing. Flask-based web interface for user-driven video analysis.",
+        description: "Computer-vision based tennis analysis software using YOLOv8 and PyTorch, creating models with custom image datasets for enhanced object detection and tracking in video streams. Trained a CNN to extract keypoints, implemented complex tracking algorithms, and utilized OpenCV for robust video processing.",
         image: "images/tennisML.png"
     },
     {
         title: "Cache Simulation System | C ",
         description: "Project simulates a Cache memory system, enabling interaction between cache and main memory. It tracks and logs cache hits and misses, offering insights into memory access patterns. The system allows for customizable memory sizes and generates random data to populate the main memory, simulating real-world behavior. Additionally, it provides detailed cache performance statistics and verifies data integrity by ensuring the consistency of values between cache and main memory.",
         image: "images/cachingProj.png"
+    },
+    {
+        title: "SixSlang Translator | Swift, Swift UI",
+        description: "Swift based application that takes in a users sentence, either in proper English or < Toronto > English, then translates it accordingly.",
+        image: "images/sixSlang.png",
+        link: "https://github.com/AdamFuzesi/SixSlang"
     },
     {
         title: "Sequestration Model Nasa Space Apps | Python, Flask, JSON",
