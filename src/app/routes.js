@@ -6,6 +6,7 @@ import { ContactUs } from "../pages/contact";
 import { About } from "../pages/about";
 import { Socialicons } from "../components/socialicons";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { Extracurricular } from "../pages/extracurricular";
 // add in:  <Route path="/portfolio" element={<Portfolio />} />   if wanting to add the portfolio component for my photography
 const AnimatedRoutes = withRouter(({ location }) => (
   <TransitionGroup>
@@ -22,6 +23,7 @@ const AnimatedRoutes = withRouter(({ location }) => (
         <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/Extracurricular" element={<Extracurricular />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </CSSTransition>

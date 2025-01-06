@@ -29,11 +29,6 @@ const worktimeline = [{
         date: "04/2024 - 09/2024",
     },
     {
-        jobtitle: "Fullstack Developer",
-        where: "Kickit Web Dev",
-        date: "03/2024 - Ongoing ( Side Project )"
-    },
-    {
         jobtitle: "Healthcare IT programmer",
         where: "Vitality",
         date: "05/2020 - 09/2020",
@@ -104,7 +99,7 @@ const skills = [{
 
 const services = [{
         title: "Kickit Web Dev | React, Typescript, GraphQL, Wordpress ",
-        description: "Co-founded a web development venture, enhancing SEO through Server-Side Rendering. Developed a streamlined pipeline for custom websites using React and WordPress, and led e-commerce integrations using Node.js with Shopify's GraphQL API. Currently catering to 5 businesses across Canada.",
+        description: "Co-founded a web development venture, enhancing SEO through Server side Rendering. Developed a streamlined pipeline for custom websites using React and WordPress, making it seamless to deliver efficient and high quality websites and applications to clients, and led e-commerce integrations utilizing Node.js with Shopify's GraphQL API. Currently catering to 5 businesses across Canada.",
         image: "images/kickit.png",
         link: "https://www.kickitweb.ca/"
     },
@@ -118,6 +113,13 @@ const services = [{
         title: "Dune Yourself (Coming soon) | React + Vite, AWS",
         description: "A React-based application that prompts users to upload an image and complete a questionnaire inspired by the Dune universe. Leveraging AI and canonical lore, my program then generates a personalized character—from appearance to backstory, seamlessly integrating the new persona into established Dune lore. The result is a dynamic, lore rich narrative uniquely tailored to each user’s choices and image input!",
         image: "images/dune.png"
+    },
+    {
+        title: "Yellow Submarine | C, OpenGL, GLUT",
+        description: "3D underwater submarine simulation with multiple environment models and a responsive flock of fish created by implementing Craig Reynolds's Boid algorithm into a 3D rendered environment. Programmed fully with C utlizing the OpenGL Library.",
+        image: "",
+        link: "https://github.com/AdamFuzesi/Yellow-Submarine/tree/main"
+
     },
     {
         title: "Tennis ML Analyzer/Coach | Python, YOLOv8, Pytorch, Flask ",
@@ -155,6 +157,55 @@ const services = [{
     }
     // add new sections and update based off the best projects to showcase
 ];
+
+const extracurricular = [
+    {
+        title: "Bachelor Of Computer Science Representative",
+        description: "I have been given the honor to represent my faculty as the BCS representative. My main duties include acting as a connections between faculty members and students, planning events and hackathons, meeting with companies for potential events and assigning course representatives throughout our faculties courses each semester. Fun fact, I do not watch the Social Network on 2x speed every morning, but admire the movie quite a bit.",
+        image: "images/cssCouncil.png",
+        link: "https://society.cs.dal.ca/about/"
+    },
+    {
+      title: "RedBull Case Competition UI/UX Designer",
+      description:
+        "Co-led the UI designs in the RedBull Basement competition team representing Canada in a worldwide competition. Still on this project, as the two owners are now working towards making the startup a successful reality. Will stay on the RealEstate Lynx team as a FullStack Developer.",
+      image: "images/redbullExtra.png",
+      link: "https://www.redbull.com/ca-en/events/red-bull-basement-canada"
+    },
+    {
+      title: "ICPC Programming Team Member",
+      description:
+        "Active member of the ICPC competitive programming team at Dalhousie Univerisity. Practicing weekly tackling complex algorithmic challenges.",
+      image: "images/ICPC.png"
+    },
+    {
+      title: "Kickit Web Startup",
+      description:
+        "Co-founded a web development venture, building custom solutions in React, Node, and GraphQL for local businesses. Developed a streamlined pipeline for custom websites using React and WordPress, making it seamless to deliver efficient and high quality websites/applications to clients, and led e-commerce integrations utilizing Node.js with Shopify's GraphQL API. Currently catering to 5 businesses across Canada.",
+      image: "/images/kickitWeb.png",
+      link: "https://www.kickitweb.ca/"
+    },
+    {
+        title: "Dalhousie BlockChain Programmer",
+        description: "Member of Dalhousie's Blockchain Society as a fullstack developer. Will be competing in Eth Denver representing the University this upcoming february. ",
+        image: "images/dalhousieBlock.png",
+        link: "https://www.dalbcs.com/"
+    },
+    {
+      title: "Dal Linux Society",
+      description:
+              "Though my main machine is an M1 Mac, I have configured my old Razer Blade Stealth laptop to Arch Linux, and became an active member of the Linux Society.",
+      image: "images/linuxSoc.png",
+      link: "https://linuxsociety.ca/#about"
+    },
+    {
+      title: "Best Buddies",
+      description: "Active member of the best buddies program, fostering friendships with individuals with intellectual disabilities.",
+      image: "images/pleaseWork.png",
+      link: "https://carty-party.glitch.me/#About"
+    }
+];
+
 
 const dataportfolio = [{
         img: "https://picsum.photos/400/?grayscale",
@@ -244,6 +295,7 @@ export {
     skills,
     services,
     introdata,
+    extracurricular,
     contactConfig,
     socialprofils,
     logotext,

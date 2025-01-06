@@ -13,14 +13,11 @@ import {
 
 /*
 TODO:
-
 - Add portion for the redbull case comp stuff 
 - Add a more in depth for the Kickit stuff and the side business work 
 - Add portion for the ICPC programming team 
 - Add a portion for photography
 - Add a little game 
-
-
 */
 
 export const About = () => {
