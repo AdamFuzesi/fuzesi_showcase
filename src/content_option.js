@@ -149,6 +149,12 @@ const services = [{
         image: "images/challenger.png"
     },
     {
+        title: "Magical Terminal Cube | C ",
+        description: "Heavily math based C program that simulates a spinning cube within the terminal. One of my first C projects! ",
+        image: "images/terminalCube.png",
+        link: "https://github.com/AdamFuzesi/Magical-Terminal-Cube"
+    },
+    {
         title: "A* Algorithm Visualizer | Python, Pygame ",
         description: "Developed an interactive pathfinding algorithm visualizer in Python, using the PyGame library to create a dynamic simulation environment. Program features user-customizable parameters, enabling the adjustment of start and end points, and the placement of obstacles within the grid.",
         image: "images/aStarVisualizer.png",
