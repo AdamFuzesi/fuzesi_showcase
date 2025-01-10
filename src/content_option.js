@@ -12,7 +12,7 @@ const introdata = {
         second: "Google Cloud Certified",
         third: "Cloud Engineer Intern",
         fourth: "Hungarian/Canadian",
-        fifth: "BCS student minoring in Mathematics and Economics"
+        fifth: "BCS student minoring in Mathematics"
     },
     description: "Get to know a little about me...",
     intro_img_url: "/images/evenBetterStudious.png",
