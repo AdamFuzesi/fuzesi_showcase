@@ -117,7 +117,7 @@ const services = [{
     {
         title: "Yellow Submarine | C, OpenGL, GLUT",
         description: "3D underwater submarine simulation with multiple environment models and a responsive flock of fish created by implementing Craig Reynolds's Boid algorithm into a 3D rendered environment. Programmed fully with C utlizing the OpenGL Library.",
-        image: "",
+        image: "images/yellowSubmarine.png",
         link: "https://github.com/AdamFuzesi/Yellow-Submarine/tree/main"
 
     },
@@ -129,7 +129,8 @@ const services = [{
     {
         title: "Cache Simulation System | C ",
         description: "Project simulates a Cache memory system, enabling interaction between cache and main memory. It tracks and logs cache hits and misses, offering insights into memory access patterns. The system allows for customizable memory sizes and generates random data to populate the main memory, simulating real-world behavior. Additionally, it provides detailed cache performance statistics and verifies data integrity by ensuring the consistency of values between cache and main memory.",
-        image: "images/cachingProj.png"
+        image: "images/cachingProj.png",
+        link: "https://github.com/AdamFuzesi/cacheSim"
     },
     {
         title: "SixSlang Translator | Swift, Swift UI",
