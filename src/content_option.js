@@ -104,6 +104,12 @@ const services = [{
         link: "https://www.kickitweb.ca/"
     },
     {
+        title: "FirstIn | Swift, SwiftUI, AWS",
+        description:"Lead developer behind FirstIn, app designed to enhance anyones outting experience by offering special event passes and line skip tickets. Currently in development, multiple establishements located within Toronto already signed up and invested within the product.",
+        image: "images/firstIn.png",
+        link: "https://www.instagram.com/firstin.ca/?hl=en"
+    },
+    {
         title: "RedBull Basement Team Canada | UI Designer",
         description: "Co-led UI design and front-end development for Estate Lynx, Team Canada’s finalist entry in the RedBull Basement global pitch competition in Japan. The AI-powered platform provides real-time listings, key metrics, and personalized insights, making real estate investment accessible for novices. After the competition, I continued as a front-end developer, in preparation for launch. ",
         image: "images/redbullGood.png",

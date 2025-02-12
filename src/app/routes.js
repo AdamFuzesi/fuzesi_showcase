@@ -7,7 +7,10 @@ import { About } from "../pages/about";
 import { Socialicons } from "../components/socialicons";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { Extracurricular } from "../pages/extracurricular";
-// add in:  <Route path="/portfolio" element={<Portfolio />} />   if wanting to add the portfolio component for my photography
+
+// add in:  <Route path="/portfolio" element={<Portfolio />} /> 
+// if wanting to add the portfolio component for my photography
+
 const AnimatedRoutes = withRouter(({ location }) => (
   <TransitionGroup>
     <CSSTransition
