@@ -21,7 +21,7 @@ const introdata = {
 
 const dataabout = {
     title: "A bit about myself...",
-    aboutme: "Currently in my third year at Dalhousie University studying Computer Science with minors in Mathematics and Economics, I also serve as the Bachelor of Computer Science Representative for my faculty. My software engineering journey began early in high school, developing Python scripts and applications for various businesses or personal use, and has since expanded to include significant contributions to open-source projects, competitive programming, and professional work as a cloud engineer intern. Beyond programming, I'm passionate about competitive Tennis and Photography, which gives me a creative and disciplined outlet away from the screen. Committed to my continuous learning field, I actively enjoy pursuing new certifications, practicing with my fellow competitive programming teammates for the ICPC, and continuously work on new projects, constantly seeking to enhance my skills and stay ahead in the ever-evolving tech landscape!",
+    aboutme: "Currently in my third year at Dalhousie University studying Computer Science with minors in Mathematics and Economics, I also serve as the Bachelor of Computer Science Representative for my faculty, and the Vice Lead Developer for the Blockchain Society. My software engineering journey began early in high school, developing Python scripts and applications for various businesses or personal use, and has since expanded to include significant contributions to open-source projects, competitive programming, and professional work as a cloud engineer intern. Beyond programming, I'm passionate about competitive Tennis and Photography, which gives me a creative and disciplined outlet away from the screen. Committed to my continuous learning field, I actively enjoy pursuing new certifications, practicing with my fellow competitive programming teammates for the ICPC, and continuously work on new projects, constantly seeking to enhance my skills and stay ahead in the ever-evolving tech landscape!",
 };
 const worktimeline = [{
         jobtitle: "Cloud Engineer ",
@@ -186,6 +186,12 @@ const extracurricular = [
       link: "https://www.redbull.com/ca-en/events/red-bull-basement-canada"
     },
     {
+        title: "Blockchain Society, Vice Lead of Development",
+        description: "Second in command of Dalhousie's Blockchain Society within the developer team. Leading the intricate team of developers and competing in world renowned hackathons such as EthDenver's EigenGames, competing amongst the best student developers across North America ",
+        image: "images/blockchaindev.png",
+        link: "https://www.dalbcs.com/"
+    },
+    {
       title: "ICPC Programming Team Member",
       description:
         "Active member of the ICPC competitive programming team at Dalhousie Univerisity. Practicing weekly tackling complex algorithmic challenges.",
@@ -197,12 +203,6 @@ const extracurricular = [
         "Co-founded a web development venture, building custom solutions in React, Node, and GraphQL for local businesses. Developed a streamlined pipeline for custom websites using React and WordPress, making it seamless to deliver efficient and high quality websites/applications to clients, and led e-commerce integrations utilizing Node.js with Shopify's GraphQL API. Currently catering to 5 businesses across Canada.",
       image: "/images/kickitWeb.png",
       link: "https://www.kickitweb.ca/"
-    },
-    {
-        title: "Dalhousie BlockChain Programmer",
-        description: "Member of Dalhousie's Blockchain Society as a fullstack developer. Will be competing in Eth Denver representing the University this upcoming february. ",
-        image: "images/dalhousieBlock.png",
-        link: "https://www.dalbcs.com/"
     },
     {
       title: "Dal Linux Society",
