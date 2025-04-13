@@ -16,7 +16,7 @@ const introdata = {
     },
     description: "Get to know a little about me...",
     intro_img_url: "/images/evenBetterStudious.png",
-    // changed based on the use case to showcase and make sure it matches it based off the animation
+    // changed to be based on the use case to showcase and make sure it matches it based off the animation
 };
 
 const dataabout = {
