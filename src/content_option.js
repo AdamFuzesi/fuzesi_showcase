@@ -40,7 +40,7 @@ const worktimeline = [{
     },
 ];
 
-// add in code language image based visual aspect next to the names of the languages
+// add in code languages image based visual aspect next to the names of the languages
 const skills = [{
         name: "Python",
         image: "/images/pyhtonImage.png"
