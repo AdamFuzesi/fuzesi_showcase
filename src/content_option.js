@@ -212,6 +212,14 @@ const extracurricular = [
       link: "https://linuxsociety.ca/#about"
     },
     {
+        title: "Member of Google Developers Group Halifax",
+        description:
+        "Ongoing member of the halifax Google developers group. Attending virtual confereances and meeting with likeminded people to discuss and learn about google services.",
+        image: "/images/googleHalifax.png",
+        link: "https://gdg.community.dev/gdg-halifax/"
+
+    },
+    {
       title: "Best Buddies",
       description: "Active member of the best buddies program, fostering friendships with individuals with intellectual disabilities.",
       image: "images/pleaseWork.png",
