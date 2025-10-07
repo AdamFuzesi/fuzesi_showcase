@@ -4,6 +4,45 @@ const meta = {
     description: "I'm a Software Engineer and Computer Science Student",
 };
 
+/**
+ * Resume and portfolio points to add:
+ * 
+ * RESMED work (intro and deep dive into platform engineering and talking about my project)
+ * 
+ * Blockchain Involvement including: Hackathons and travel, Lead developer for the 2025-2026 season
+ * 
+ * Adding FirstIn founding engineer 
+ * 
+ * Adding the AWS AI practicioner certificate
+ * 
+ * Adding in projects worked on (hackathon and personal projects, ie Aptos Pixels, Mosaic, Vision)
+ * 
+ * Korea University update, specifics on courses and involvement
+ * 
+ * PORTFOLIO CONTENT:
+ * 
+ * Most of the things said above, images in sort of a blog format of a bunhc of things like hackathons, resmed, gala, blockchain team etc.
+ * Updating the proejcts section with the things mentioned above, update the involvement section.
+ * 
+ * Overall update the UI as well.
+ * 
+ * RESUME CONTENT:
+ * 
+ * Projects and the work involvement, Korea Update, certificate update, year update, overall restructuring of my projects and experience sections.
+ * 
+ * 
+ * 
+ * 
+ * TO REMOVE FROM RESUME:
+ * 
+ * Student Pharmacist assitant job
+ * 
+ * Some of the involvmenet and repalce by better shit
+ * 
+ * better projects
+ * 
+ */
+
 const introdata = {
     
     title: "Hey, I'm Adam",
@@ -21,9 +60,22 @@ const introdata = {
 
 const dataabout = {
     title: "A bit about myself...",
-    aboutme: "Currently in my third year at Dalhousie University studying Computer Science with minors in Mathematics and Economics, I also serve as the Bachelor of Computer Science Representative for my faculty, and the Vice Lead Developer for the Blockchain Society. My software engineering journey began early in high school, developing simple Python scripts and applications for personal use, or offering my services to local businesses looking to have leap into technology, and has since expanded to include significant contributions to open-source projects, competitive programming, and professional work as a cloud engineer intern. Beyond programming, I'm passionate about competitive Tennis and Photography, which gives me a creative and disciplined outlet away from the screen. Committed to my continuous learning field, I actively enjoy pursuing new certifications, continuously working on various UI/UX designs, practicing with my fellow competitive programming teammates for the ICPC, and continuously work on new side projects, constantly seeking to enhance my skills and stay ahead in the ever-evolving tech landscape!",
+    aboutme: "Currently in my third year at Dalhousie University studying Computer Science with minors in Mathematics and Economics, I also serve as the Bachelor of Computer Science Representative for my faculty, and the Lead Developer for the Blockchain Society. My software engineering journey began early in high school, developing simple Python scripts and applications for personal use, or offering my services to local businesses looking to have leap into technology, and has since expanded to include significant projects and live applications, competitive programming, and professional work through various internships. Beyond programming, I'm passionate about competitive Tennis and Photography, which gives me a creative and disciplined outlet away from the screen. Committed to my continuous learning field, I actively enjoy pursuing new certifications, continuously working on various UI/UX designs, practicing with my fellow competitive programming teammates for the ICPC, and continuously work on new side projects, constantly seeking to enhance my skills and stay ahead in the ever-evolving tech landscape!",
 };
-const worktimeline = [{
+
+const worktimeline = [
+    {
+        jobtitle: "Platform Engineer ",
+        where: "Resmed",
+        date: "05/2025 - 09/2025",
+    },
+    {
+        jobtitle: "Software Engineer",
+        where: "CleanValley",
+        date: "09/2024 - 01/2025",
+
+    },
+    {
         jobtitle: "Cloud Engineer ",
         where: "DeepSense",
         date: "04/2024 - 09/2024",
@@ -110,6 +162,12 @@ const services = [{
         link: "https://www.instagram.com/firstin.ca/?hl=en"
     },
     {
+        title: "Mosaic | Typescript, Node.js, Stellar Blockchain",
+        description: "Built for the Consensus 2025 Hackathon in Toronto, it's a passkey-based crypto wallet designed for a seamless user experience. Aiming to simplify crypto transactions by incorporating familiar features from apps like Venmo and PayPal, while also offering unique functionalities like cash deposits via MoneyGram. I encourage you to explore our features and provide any feedback you might have.",
+        image: "images/mosaic.png",
+        link: "https://www.loom.com/share/675256788d13441fac23942379359ac4?sid=715c01f1-cafa-4c85-8cfe-bd6ba749a3ec"
+    },
+    {
         title: "RedBull Basement Team Canada | UI Designer",
         description: "Co-led UI design and front-end development for Estate Lynx, Team Canada’s finalist entry in the RedBull Basement global pitch competition in Japan. The AI-powered platform provides real-time listings, key metrics, and personalized insights, making real estate investment accessible for novices. After the competition, I continued as a front-end developer, in preparation for launch. ",
         image: "images/redbullGood.png",
@@ -126,6 +184,12 @@ const services = [{
         image: "images/yellowSubmarine.png",
         link: "https://github.com/AdamFuzesi/Yellow-Submarine/tree/main"
 
+    },
+    {
+        title: "AptosPixel |  React, Tailwind CSS, Aptos Blockchain, Framer",
+        description: "Built for Toronto Hack 2025, aptos Pixel allows users to purchase, own, and customize single pixels on a shared digital canvas, creating a permanent space for businesses, communities, and personal brands in a truly decentralized way.",
+        image: "images/aptos.png",
+        link: "https://www.loom.com/share/3eb900e79e9345f7bb2611b4b7952cca?sid=40424c8b-bdcc-4bd2-948c-9c36eff6570f"
     },
     {
         title: "Tennis ML Analyzer/Coach | Python, YOLOv8, Pytorch, Flask ",
@@ -186,10 +250,16 @@ const extracurricular = [
       link: "https://www.redbull.com/ca-en/events/red-bull-basement-canada"
     },
     {
-        title: "Blockchain Society, Vice Lead of Development",
-        description: "Second in command of Dalhousie's Blockchain Society within the developer team. Leading the intricate team of developers and competing in world renowned hackathons such as EthDenver's EigenGames, competing amongst the best student developers across North America ",
+        title: "Blockchain Society, Lead of Development",
+        description: "Lead of Dalhousie's Hackathon team. Leading the intricate team of developers and competing in world renowned hackathons such as EigenGames, EthDenver, HackTheNorth, Consensus Toronto, competing amongst the best student developers across the world.",
         image: "images/blockchaindev.png",
         link: "https://www.dalbcs.com/"
+    },
+    {
+        title: "FirstIn Founding Engineer",
+        description: "Started and lead the development from the ground up for the app FirstIn, a VIP nightlife line skip app partnered with multiple venues across Canada.",
+        image: "images/firstinInvolvement.png",
+        link: "https://firstin.app/about"
     },
     {
       title: "ICPC Programming Team Member",
