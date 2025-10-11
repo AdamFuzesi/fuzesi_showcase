@@ -30,9 +30,6 @@ const meta = {
  * 
  * Projects and the work involvement, Korea Update, certificate update, year update, overall restructuring of my projects and experience sections.
  * 
- * 
- * 
- * 
  * TO REMOVE FROM RESUME:
  * 
  * Student Pharmacist assitant job
@@ -70,7 +67,7 @@ const worktimeline = [
         date: "05/2025 - 09/2025",
     },
     {
-        jobtitle: "Software Engineer",
+        jobtitle: "Part-time Software Engineer",
         where: "CleanValley",
         date: "09/2024 - 01/2025",
 
@@ -83,7 +80,7 @@ const worktimeline = [
     {
         jobtitle: "Healthcare IT programmer",
         where: "Vitality",
-        date: "05/2020 - 09/2020",
+        date: "05/2022 - 09/2022",
     },
     {
         jobtitle: "Student Pharmacy Assistant",
