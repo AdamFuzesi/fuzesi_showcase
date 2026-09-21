@@ -12,6 +12,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 
+    <!-- When embedded in the 3D portfolio (adamfuzesi.com), hand ESC up to the parent page so
+         the camera can step back even while this page holds keyboard focus. -->
+    <script>
+        (function () {
+            if (window.parent === window) return;
+            var allowed = ['https://adamfuzesi.com', 'https://www.adamfuzesi.com', 'http://localhost:3000'];
+            window.addEventListener('keydown', function (e) {
+                if (e.key !== 'Escape') return;
+                allowed.forEach(function (origin) {
+                    try { window.parent.postMessage({ type: 'portfolio:escape' }, origin); } catch (err) {}
+                });
+            });
+        })();
+    </script>
 </head>
 
 <body>
