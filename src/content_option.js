@@ -44,9 +44,9 @@ const introdata = {
     
     title: "Hey, I'm Adam",
     animated: {
-        first: "Aspiring Software Engineer",
-        second: "Google Cloud Certified",
-        third: "Cloud Engineer Intern",
+        first: "Design Engineer @Locus",
+        second: "Ex SWE @American Express",
+        third: "Google Cloud Certified",
         fourth: "Hungarian/Canadian",
         fifth: "BCS student minoring in Mathematics"
     },
@@ -62,7 +62,17 @@ const dataabout = {
 
 const worktimeline = [
     {
-        jobtitle: "Platform Engineer ",
+        jobtitle: "Fullstack Engineer",
+        where: "Locus (YC F25)",
+        date: "03/2026 - Present",
+    },
+    {
+        jobtitle: "Software Engineer",
+        where: "American Express (Accenture)",
+        date: "05/2026 - 08/2026",
+    },
+    {
+        jobtitle: "Platform Engineer Intern",
         where: "Resmed",
         date: "05/2025 - 09/2025",
     },
@@ -73,19 +83,14 @@ const worktimeline = [
 
     },
     {
-        jobtitle: "Cloud Engineer ",
+        jobtitle: "Cloud Engineer Intern",
         where: "DeepSense",
-        date: "04/2024 - 09/2024",
+        date: "05/2024 - 09/2024",
     },
     {
         jobtitle: "Healthcare IT programmer",
         where: "Vitality",
         date: "05/2022 - 09/2022",
-    },
-    {
-        jobtitle: "Student Pharmacy Assistant",
-        where: "Shoppers",
-        date: "11/2018 - 03/2020",
     },
 ];
 
@@ -147,16 +152,22 @@ const skills = [{
 ];
 
 const services = [{
+        title: "Yorigo | React Native, Typescript, PostgreSQL, Coupang API, Gemini API",
+        description: "Mobile app built during my time in Korea, currently #32 on the Korean App Store charts. Yorigo turns short-form cooking content into a shoppable grocery order: a pipeline ingests recipes from YouTube, Instagram and TikTok, extracts and structures the ingredients with multimodal extraction over the video, audio and captions, and routes them to a one-tap checkout across Korean commerce platforms (Coupang and Market Kurly). Started as a hackathon project that won 1st place at HackSeoul, then gained traction and was incubated by NAVER.",
+        image: "images/yorigo.png",
+        link: "https://yorigo.kr/"
+    },
+    {
+        title: "FirstIn | Swift, SwiftUI, Xcode, AWS, React, Stripe API",
+        description: "Founding Engineer behind the FirstIn iOS app, defining the end-to-end architecture of the full mobile and web stack, including a full-scale CRM platform for the businesses using our software. Integrated a secure Stripe payment flow, implemented QR/digital ticket issuance and redemption, and built an admin portal giving venues real-time ticket analytics and streamlined partner management. Over 20 businesses across Canada and over 24,000 downloads.",
+        image: "images/firstIn.png",
+        link: "https://firstin.app/about"
+    },
+    {
         title: "Kickit Web Dev | React, Typescript, GraphQL, Wordpress ",
         description: "Co-founded a web development venture, enhancing SEO through Server side Rendering. Developed a streamlined pipeline for custom websites using React and WordPress, making it seamless to deliver efficient and high quality websites and applications to clients, and led e-commerce integrations utilizing Node.js with Shopify's GraphQL API. Currently catering to 5 businesses across Canada.",
         image: "images/kickit.png",
         link: "https://www.kickitweb.ca/"
-    },
-    {
-        title: "FirstIn | Swift, SwiftUI, AWS",
-        description:"Lead developer behind FirstIn, app designed to enhance anyones outting experience by offering special event passes and line skip tickets. Currently in development, multiple establishements located within Toronto already signed up and invested within the product.",
-        image: "images/firstIn.png",
-        link: "https://www.instagram.com/firstin.ca/?hl=en"
     },
     {
         title: "Mosaic | Typescript, Node.js, Stellar Blockchain",
@@ -254,7 +265,7 @@ const extracurricular = [
     },
     {
         title: "FirstIn Founding Engineer",
-        description: "Started and lead the development from the ground up for the app FirstIn, a VIP nightlife line skip app partnered with multiple venues across Canada.",
+        description: "Founding Engineer of FirstIn, a VIP nightlife line skip app. Built the full mobile and web stack from the ground up, now used by over 20 venues across Canada with over 24,000 downloads.",
         image: "images/firstinInvolvement.png",
         link: "https://firstin.app/about"
     },

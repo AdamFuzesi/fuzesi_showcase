@@ -212,11 +212,13 @@ export const About = () => {
         {services.map((data, i) => (
           <Row className="project-row" key={i}>
             <Col lg="5" md="5" sm="12">
-              <img
-                src={data.image}
-                alt={data.title}
-                className="project-image"
-              />
+              {data.image && (
+                <img
+                  src={data.image}
+                  alt={data.title}
+                  className="project-image"
+                />
+              )}
             </Col>
             <Col lg="7" md="7" sm="12" className="d-flex align-items-center">
               <div className="project-text">
