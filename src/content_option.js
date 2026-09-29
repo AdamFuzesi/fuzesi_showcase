@@ -116,6 +116,7 @@ const worktimeline = [
         model: "/models/logos/resmed.svg",
         description: [
             "Platform engineering on the team behind ResMed's connected-care products.",
+            "Built a SonarQube-based code quality review system for the platform that 40+ engineering teams ship on. It automatically catches bugs, vulnerabilities, and code smells in the pipeline before merge. It's still in production across ResMed's engineering org.",
         ],
     },
     {
