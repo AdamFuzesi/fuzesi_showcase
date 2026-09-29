@@ -1,0 +1,9 @@
+# Netlify builds this site from `main` on every push; it's embedded as an iframe in the 3D portfolio
+# (adamfuzesi.com → https://fuzesishowcase.netlify.app). Settings here override the Netlify UI.
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  # Vite 8 needs Node ≥ 20.19.
+  NODE_VERSION = "22"

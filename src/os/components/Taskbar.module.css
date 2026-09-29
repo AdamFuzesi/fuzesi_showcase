@@ -1,0 +1,96 @@
+.taskbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--taskbar-h);
+  z-index: var(--z-taskbar);
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  padding: 3px 2px 2px;
+  background: var(--c-face);
+  box-shadow: inset 0 1px var(--c-face-light), inset 0 2px var(--c-highlight);
+}
+
+.start {
+  height: 22px;
+  padding: 0 6px 0 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: none;
+  background: var(--c-face);
+  box-shadow: var(--bevel-raised);
+  font-weight: 700;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.start[aria-pressed="true"] {
+  box-shadow: var(--bevel-pressed);
+  padding: 1px 5px 0 5px;
+}
+.start:focus-visible {
+  outline-offset: -4px;
+}
+
+/* Raised divider between the Start button and the task list. */
+.grip {
+  width: 3px;
+  height: 20px;
+  flex-shrink: 0;
+  box-shadow: inset -1px 0 var(--c-shadow), inset 1px 0 var(--c-highlight);
+}
+
+.tasks {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  gap: 3px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.taskItem {
+  flex: 0 1 160px;
+  min-width: 0;
+}
+.task {
+  width: 100%;
+  height: 22px;
+  padding: 0 6px 0 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: none;
+  background: var(--c-face);
+  box-shadow: var(--bevel-raised);
+  cursor: pointer;
+  text-align: left;
+}
+.task[aria-pressed="true"] {
+  box-shadow: var(--bevel-pressed);
+  font-weight: 700;
+  background-color: var(--c-face-light);
+  background-image: conic-gradient(var(--c-face) 25%, var(--c-highlight) 0 50%, var(--c-face) 0 75%, var(--c-highlight) 0);
+  background-size: 2px 2px;
+  padding-top: 1px;
+}
+.task svg {
+  flex-shrink: 0;
+}
+.taskLabel {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.tray {
+  height: 22px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 8px 0 6px;
+  box-shadow: var(--bevel-status);
+  flex-shrink: 0;
+}

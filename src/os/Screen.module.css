@@ -1,0 +1,17 @@
+.host {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+.screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--screen-w);
+  height: var(--screen-h);
+  overflow: hidden;
+  transform-origin: center;
+  isolation: isolate;
+}

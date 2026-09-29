@@ -1,0 +1,186 @@
+/* ---------- Button ---------- */
+.button {
+  min-width: 75px;
+  min-height: 23px;
+  padding: 0 var(--s-5);
+  border: none;
+  border-radius: 0;
+  background: var(--c-face);
+  box-shadow: var(--bevel-raised);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-2);
+  white-space: nowrap;
+}
+.button:active:not(:disabled),
+.button[aria-pressed="true"] {
+  box-shadow: var(--bevel-pressed);
+  padding-top: 2px;
+  padding-left: calc(var(--s-5) + 1px);
+}
+.button[aria-pressed="true"] {
+  background-color: var(--c-face-light);
+  background-image: conic-gradient(var(--c-face) 25%, var(--c-highlight) 0 50%, var(--c-face) 0 75%, var(--c-highlight) 0);
+  background-size: 2px 2px;
+}
+.button:focus-visible {
+  outline-offset: -5px;
+}
+.button:disabled {
+  color: var(--c-text-disabled);
+  text-shadow: 1px 1px 0 var(--c-highlight);
+  cursor: default;
+}
+.default {
+  box-shadow: var(--bevel-default-button), var(--bevel-raised);
+}
+.linkButton {
+  color: inherit;
+  text-decoration: none;
+}
+.compact {
+  min-width: 0;
+  padding: 0 var(--s-3);
+}
+
+/* ---------- Group box ---------- */
+.group {
+  margin: 0 0 var(--s-4);
+  padding: var(--s-5) var(--s-4) var(--s-4);
+  border: none;
+  box-shadow: inset -1px -1px var(--c-highlight), inset -2px 1px var(--c-shadow), inset 1px -2px var(--c-shadow), inset 2px 2px var(--c-highlight);
+}
+.group > legend {
+  padding: 0 var(--s-1);
+  background: var(--c-face);
+}
+
+/* ---------- Sunken well (list views, text areas, previews) ---------- */
+.sunken {
+  background: var(--c-window);
+  box-shadow: var(--bevel-field);
+  padding: var(--s-1);
+}
+
+/* ---------- Fields ---------- */
+.fieldRow {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  align-items: center;
+  gap: var(--s-4);
+  margin-bottom: var(--s-3);
+}
+.fieldRowTop {
+  align-items: start;
+}
+.fieldRowTop > label {
+  padding-top: 4px;
+}
+.input {
+  width: 100%;
+  height: 21px;
+  padding: 3px 4px;
+  border: none;
+  border-radius: 0;
+  background: var(--c-window);
+  box-shadow: var(--bevel-field);
+  user-select: text;
+}
+textarea.input {
+  height: auto;
+  min-height: 96px;
+  resize: none;
+  font-family: var(--font-ui);
+}
+.input:focus-visible {
+  outline: none;
+}
+
+/* ---------- Tabs ---------- */
+.tablist {
+  display: flex;
+  align-items: flex-end;
+  padding-left: 3px;
+  position: relative;
+  z-index: 1;
+}
+.tab {
+  border: none;
+  background: var(--c-face);
+  padding: 3px 10px 3px;
+  margin-right: -1px;
+  cursor: pointer;
+  box-shadow: inset -1px 0 var(--c-dark), inset 1px 1px var(--c-highlight), inset -2px 0 var(--c-shadow), inset 2px 2px var(--c-face-light);
+  border-radius: 3px 3px 0 0;
+}
+.tab[aria-selected="true"] {
+  padding-bottom: 5px;
+  margin: 0 -3px -2px;
+  padding-left: 12px;
+  padding-right: 12px;
+  z-index: 2;
+  position: relative;
+}
+.tabpanel {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: var(--s-5) var(--s-5) var(--s-4);
+  background: var(--c-face);
+  box-shadow: var(--bevel-window);
+}
+
+/* ---------- Status bar ---------- */
+.statusBar {
+  display: flex;
+  gap: var(--s-1);
+  margin-top: var(--s-1);
+  flex-shrink: 0;
+}
+.statusField {
+  flex: 1;
+  min-width: 0;
+  padding: 2px var(--s-2);
+  box-shadow: var(--bevel-status);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.statusField:first-child {
+  flex: 3;
+}
+
+/* ---------- Divider ---------- */
+.divider {
+  height: 2px;
+  margin: var(--s-4) 0;
+  border: none;
+  box-shadow: inset 0 1px var(--c-shadow), inset 0 -1px var(--c-highlight);
+}
+
+/* ---------- Toolbar (address bars etc.) ---------- */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  padding: var(--s-1) var(--s-1) var(--s-2);
+  flex-shrink: 0;
+}
+.toolbarLabel {
+  color: var(--c-text);
+  padding: 0 var(--s-1);
+}
+.address {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  height: 22px;
+  padding: 0 var(--s-2);
+  background: var(--c-window);
+  box-shadow: var(--bevel-field);
+  overflow: hidden;
+  white-space: nowrap;
+}

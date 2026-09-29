@@ -1,0 +1,107 @@
+/* The registration card: paper stock, like the Projects spec sheet. */
+.card {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  align-items: center;
+  gap: 34px;
+  padding: 22px 28px 22px 26px;
+  background: var(--c-paper);
+  box-shadow: var(--bevel-field);
+  overflow: hidden;
+}
+
+/* A white-bordered print with the same clockwise lean and soft studio shadow as the 3D phones. */
+.print {
+  margin: 0;
+  padding: 8px;
+  background: #fff;
+  transform: rotate(2.2deg);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.06),
+    0 3px 6px -2px rgba(0, 0, 0, 0.18),
+    0 18px 26px -14px rgba(0, 0, 0, 0.5);
+  transition: transform 260ms cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 260ms ease;
+}
+.print:hover {
+  transform: rotate(0.8deg) translateY(-3px);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.06),
+    0 6px 10px -4px rgba(0, 0, 0, 0.18),
+    0 26px 32px -16px rgba(0, 0, 0, 0.45);
+}
+.print img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.body {
+  min-width: 0;
+}
+
+.kicker {
+  margin: 0 0 var(--s-3);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--c-shadow);
+}
+
+/* Hollow display name — the same treatment as the project titles. */
+.name {
+  margin: 0;
+  padding-bottom: var(--s-4);
+  border-bottom: 2px solid var(--c-dark);
+  font-family: var(--font-display);
+  font-size: 46px;
+  line-height: 0.92;
+  letter-spacing: -1.5px;
+  color: transparent;
+  -webkit-text-stroke: 1.1px var(--c-dark);
+  text-wrap: balance;
+}
+@supports not (-webkit-text-stroke: 1px black) {
+  .name {
+    color: var(--c-dark);
+  }
+}
+
+.headline {
+  margin: var(--s-4) 0 var(--s-5);
+  line-height: 1.5;
+}
+
+.facts {
+  margin: 0 0 var(--s-6);
+}
+.fact {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  align-items: baseline;
+  gap: var(--s-4);
+  padding: 5px 0;
+  border-top: 1px solid #e4e0d4;
+}
+.fact:last-child {
+  border-bottom: 1px solid #e4e0d4;
+}
+.fact dt {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--c-shadow);
+}
+.fact dd {
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+}

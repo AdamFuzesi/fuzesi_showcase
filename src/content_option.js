@@ -40,6 +40,23 @@ const meta = {
  * 
  */
 
+const profile = {
+    name: "Adam C. Fuzesi",
+    shortName: "Adam",
+    headline: "Final-year Computer Science student at Dalhousie University (graduating 2026), minor in Mathematics and Economics.",
+    // About Me → General: the print on the registration card (4:5 crop of IMG_3066).
+    portrait: "/images/os/portrait.jpg",
+    // Labelled facts on the registration card, in display order.
+    facts: [
+        { label: "Now", value: "Design Engineer @Locus" },
+        { label: "Before", value: "Ex SWE @American Express (Accenture)" },
+        { label: "Certified", value: "AWS  ·  GCP  ·  Azure" },
+        { label: "Alum", value: "Korea University — School of Artificial Intelligence" },
+        { label: "Roots", value: "Hungarian/Canadian" },
+    ],
+    wallpaper: "/images/os/wallpaper-hike.jpg",
+};
+
 const introdata = {
     
     title: "Hey, I'm Adam",
@@ -60,37 +77,56 @@ const dataabout = {
     aboutme: "Currently in my third year at Dalhousie University studying Computer Science with minors in Mathematics and Economics, I also serve as the Bachelor of Computer Science Representative for my faculty, and the Lead Developer for the Blockchain Society. My software engineering journey began early in high school, developing simple Python scripts and applications for personal use, or offering my services to local businesses looking to have leap into technology, and has since expanded to include significant projects and live applications, competitive programming, and professional work through various internships. Beyond programming, I'm passionate about competitive Tennis and Photography, which gives me a creative and disciplined outlet away from the screen. Committed to my continuous learning field, I actively enjoy pursuing new certifications, continuously working on various UI/UX designs, practicing with my fellow competitive programming teammates for the ICPC, and continuously work on new side projects, constantly seeking to enhance my skills and stay ahead in the ever-evolving tech landscape!",
 };
 
+/**
+ * Work history, newest first. Shown in Experience & Background → Work.
+ * Optional fields per entry (the window only renders what's present):
+ *   description: ["paragraph", ...] — what you did in the role
+ *   project:     the product/program, e.g. "Lumi platform"
+ *   location:    e.g. "San Diego"
+ *   model:       a 3D mark spun on the showcase — "/models/<file>.glb", or an SVG logo
+ *                ("/models/logos/<file>.svg") that gets extruded into 3D. Pass an array to have
+ *                several marks take turns. Without one, an outlined monogram is shown.
+ */
 const worktimeline = [
     {
-        jobtitle: "Fullstack Engineer",
+        jobtitle: "Lead Full-Stack & Design Engineer",
         where: "Locus (YC F25)",
         date: "03/2026 - Present",
+        model: "/models/locus-logo.glb",
+        description: [
+            "Building the product side of an AI platform that starts and runs internet businesses on its own. I own the payments and metering layer: one prepaid balance that routes and meters every call an agent makes, maps cost per task in real time, and settles markup as revenue.",
+            "I also built the conversational layer across iMessage, Telegram, and web, which turns plain-language requests into typed actions the user approves. On the design side, I built the onboarding, dashboard, and admin surfaces, plus the design system and motion language.",
+        ],
     },
     {
         jobtitle: "Software Engineer",
         where: "American Express (Accenture)",
         date: "05/2026 - 08/2026",
+        project: "Lumi platform",
+        model: ["/models/logos/amex.svg", "/models/logos/accenture.svg"],
+        description: [
+            "Moving AMEX's legacy Cornerstone data onto Google Cloud. I build and test ingestion pipelines on Dataflow, Pub/Sub, Airflow, BigQuery, and Spanner, write regression tooling to check that migrated data matches the source, and ship DAGs to Cloud Composer.",
+        ],
     },
     {
         jobtitle: "Platform Engineer Intern",
-        where: "Resmed",
+        where: "ResMed",
         date: "05/2025 - 09/2025",
-    },
-    {
-        jobtitle: "Part-time Software Engineer",
-        where: "CleanValley",
-        date: "09/2024 - 01/2025",
-
+        location: "San Diego",
+        model: "/models/logos/resmed.svg",
+        description: [
+            "Platform engineering on the team behind ResMed's connected-care products.",
+        ],
     },
     {
         jobtitle: "Cloud Engineer Intern",
         where: "DeepSense",
         date: "05/2024 - 09/2024",
-    },
-    {
-        jobtitle: "Healthcare IT programmer",
-        where: "Vitality",
-        date: "05/2022 - 09/2022",
+        model: "/models/logos/deepsense.svg",
+        description: [
+            "Designed the cloud data pipelines behind ocean and environmental datasets at Dalhousie's ocean-data lab.",
+            "The client liked the work enough to keep me on part-time as a Machine Learning Engineer after the internship. In that role I built predictive models on aquaculture and environmental data, using a multi-model stack (LightGBM, survival models, temporal CNNs, Bayesian NNs) to forecast outcomes for a fish-farming platform in Portugal.",
+        ],
     },
 ];
 
@@ -114,7 +150,7 @@ const skills = [{
     },
     {
         name: "React",
-        image: "/images/react.png"
+        image: "/images/react.svg"
     },
     {
         name: "Java",
@@ -152,16 +188,44 @@ const skills = [{
 ];
 
 const services = [{
+        title: "Locus",
+        role: "Lead Design Engineer",
+        description: "Lead design engineer at Locus (YC F25), owning design end to end. I built the brand identity, the design system and motion language every surface is made from, and the design-agent orchestration that lets AI agents generate and ship on-brand UI inside that system. It carries across the whole product, from the marketing site to onboarding, dashboard and admin, and into launches like Checkout with Locus, a Stripe-style checkout that lets AI agents pay.",
+        image: "images/locus.png"
+    },
+    {
         title: "Yorigo | React Native, Typescript, PostgreSQL, Coupang API, Gemini API",
         description: "Mobile app built during my time in Korea, currently #32 on the Korean App Store charts. Yorigo turns short-form cooking content into a shoppable grocery order: a pipeline ingests recipes from YouTube, Instagram and TikTok, extracts and structures the ingredients with multimodal extraction over the video, audio and captions, and routes them to a one-tap checkout across Korean commerce platforms (Coupang and Market Kurly). Started as a hackathon project that won 1st place at HackSeoul, then gained traction and was incubated by NAVER.",
         image: "images/yorigo.png",
+        // Portrait app screenshot — shown on a spinning 3D phone in the Projects light table.
+        screen: "images/screens/yorigo.jpg",
         link: "https://yorigo.kr/"
     },
     {
         title: "FirstIn | Swift, SwiftUI, Xcode, AWS, React, Stripe API",
         description: "Founding Engineer behind the FirstIn iOS app, defining the end-to-end architecture of the full mobile and web stack, including a full-scale CRM platform for the businesses using our software. Integrated a secure Stripe payment flow, implemented QR/digital ticket issuance and redemption, and built an admin portal giving venues real-time ticket analytics and streamlined partner management. Over 20 businesses across Canada and over 24,000 downloads.",
         image: "images/firstIn.png",
+        screen: "images/screens/firstin.jpg",
         link: "https://firstin.app/about"
+    },
+    {
+        title: "Polarity",
+        role: "Fellow · Brand Ambassador",
+        description: "Selected as a Polarity fellow, where I served as a brand ambassador for the company. Beyond representing Polarity in the community, I helped shape the overall brand: how it looks, how it sounds, and how its product and research are presented, keeping every touchpoint consistent with the team's voice.",
+        image: "images/polarity.png"
+    },
+    {
+        title: "ViewMax",
+        role: "Design Engineer (Contract)",
+        description: "Contracted to design and build ViewMax's landing page in a design-engineer role, owning it from visual direction through to production. I set up the design system behind it (type scale, colour and spacing tokens, and a library of reusable components) so new sections ship quickly without drifting off-brand, and optimized the page so a media-heavy experience still loads fast and feels smooth.",
+        image: "images/viewmax.png"
+    },
+    {
+        title: "Hieta",
+        role: "Design Engineer (Contract)",
+        description: "Contracted design engineer for Hieta's commerce site during my time in Korea. I designed and built the storefront experience, from product listings and collection pages to the editorial sections, with a clean, restrained layout that lets the pieces lead and makes browsing to checkout feel effortless.",
+        image: "images/hieta.png",
+        link: "https://hieta.co.kr/"
     },
     {
         title: "Kickit Web Dev | React, Typescript, GraphQL, Wordpress ",
@@ -176,15 +240,11 @@ const services = [{
         link: "https://www.loom.com/share/675256788d13441fac23942379359ac4?sid=715c01f1-cafa-4c85-8cfe-bd6ba749a3ec"
     },
     {
-        title: "RedBull Basement Team Canada | UI Designer",
+        title: "RedBull Basement Team Canada",
+        role: "UI Designer",
         description: "Co-led UI design and front-end development for Estate Lynx, Team Canada’s finalist entry in the RedBull Basement global pitch competition in Japan. The AI-powered platform provides real-time listings, key metrics, and personalized insights, making real estate investment accessible for novices. After the competition, I continued as a front-end developer, in preparation for launch. ",
         image: "images/redbullGood.png",
         link: "https://www.redbull.com/ca-en/events/red-bull-basement-canada/red-bull-basement-canada-winners"
-    },
-    {
-        title: "Dune Yourself (Coming soon) | React + Vite, AWS",
-        description: "A React-based application that prompts users to upload an image and complete a questionnaire inspired by the Dune universe. Leveraging AI and canonical lore, my program then generates a personalized character—from appearance to backstory, seamlessly integrating the new persona into established Dune lore. The result is a dynamic, lore rich narrative uniquely tailored to each user’s choices and image input!",
-        image: "images/dune.png"
     },
     {
         title: "Yellow Submarine | C, OpenGL, GLUT",
@@ -209,36 +269,6 @@ const services = [{
         description: "Project simulates a Cache memory system, enabling interaction between cache and main memory. It tracks and logs cache hits and misses, offering insights into memory access patterns. The system allows for customizable memory sizes and generates random data to populate the main memory, simulating real-world behavior. Additionally, it provides detailed cache performance statistics and verifies data integrity by ensuring the consistency of values between cache and main memory.",
         image: "images/cachingProj.png",
         link: "https://github.com/AdamFuzesi/cacheSim"
-    },
-    {
-        title: "SixSlang Translator | Swift, Swift UI",
-        description: "Swift based application that takes in a users sentence, either in proper English or < Toronto > English, then translates it accordingly.",
-        image: "images/sixSlang.png",
-        link: "https://github.com/AdamFuzesi/SixSlang"
-    },
-    {
-        title: "Sequestration Model Nasa Space Apps | Python, Flask, JSON",
-        description: "Developed for the NASA Space Apps Hackathon, web app based sequestration model enables users to explore historical carbon emissions and sequestration potential data across Canada. Using choropleth layers and heatmaps, the platform provides an interactive map based visualization of carbon dynamics in various provinces. Additionally, it highlights algae blooms in Alberta, illustrating localized sequestration potential.",
-        image: "images/spaceApps.png",
-        link: "https://algaeandco2.up.railway.app/"
-    },
-    {
-        title: "Challenger | Swift, SwiftUI, AWS",
-        description: "Currently in the early stages of development, I'm very excited to introduce Challengers, an iOS application designed to connect solo-sport players and introduce a competitive edge to casual community games. Key features include local matchmaking, progress tracking, facility and court bookings, as well as community-wide win/loss leaderboards, all aimed at fostering engaging and organized events for athletes of every level, bringing a nice competitive edge back casual players.",
-        image: "images/challenger.png"
-    },
-    {
-        title: "Magical Terminal Cube | C ",
-        description: "Heavily math based C program that simulates a spinning cube within the terminal. One of my first C projects! ",
-        image: "images/terminalCube.png",
-        link: "https://github.com/AdamFuzesi/Magical-Terminal-Cube"
-    },
-    {
-        title: "A* Algorithm Visualizer | Python, Pygame ",
-        description: "Developed an interactive pathfinding algorithm visualizer in Python, using the PyGame library to create a dynamic simulation environment. Program features user-customizable parameters, enabling the adjustment of start and end points, and the placement of obstacles within the grid.",
-        image: "images/aStarVisualizer.png",
-        link: "https://github.com/AdamFuzesi/A-Visualizer"
-
     }
     // add new sections and update based off the best projects to showcase
 ];
@@ -388,6 +418,7 @@ const socialprofils = {
 };
 export {
     meta,
+    profile,
     dataabout,
     dataportfolio,
     worktimeline,

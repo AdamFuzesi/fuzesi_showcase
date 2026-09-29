@@ -1,0 +1,131 @@
+.window {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+  background: var(--c-face);
+  box-shadow: var(--bevel-window);
+}
+.window[hidden] {
+  display: none;
+}
+.window[data-maximized="true"] {
+  padding: 2px;
+}
+
+.titleBar {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  height: 18px;
+  padding: 0 2px 0 3px;
+  flex-shrink: 0;
+  background: linear-gradient(90deg, var(--c-title-inactive-a), var(--c-title-inactive-b));
+  color: var(--c-title-text-inactive);
+  touch-action: none;
+}
+.window[data-active="true"] .titleBar {
+  background: linear-gradient(90deg, var(--c-title-active-a), var(--c-title-active-b));
+  color: var(--c-title-text);
+}
+
+.titleIcon {
+  flex-shrink: 0;
+}
+.titleText {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-size: var(--font-size);
+  font-weight: 700;
+  letter-spacing: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.controls {
+  display: flex;
+  flex-shrink: 0;
+}
+.control {
+  width: 16px;
+  height: 14px;
+  padding: 0;
+  border: none;
+  background: var(--c-face);
+  color: var(--c-dark);
+  box-shadow: var(--bevel-raised);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.control:active {
+  box-shadow: var(--bevel-pressed);
+}
+.control:active svg {
+  transform: translate(1px, 1px);
+}
+.close {
+  margin-left: 2px;
+}
+
+.body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2px;
+  padding: var(--s-1);
+  overflow: hidden;
+  user-select: text;
+}
+
+.handle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  touch-action: none;
+}
+.handle[data-edge="nw"] {
+  top: -2px;
+  left: -2px;
+  cursor: nwse-resize;
+}
+.handle[data-edge="se"] {
+  right: -2px;
+  bottom: -2px;
+  cursor: nwse-resize;
+}
+.handle[data-edge="ne"] {
+  top: -2px;
+  right: -2px;
+  cursor: nesw-resize;
+}
+.handle[data-edge="sw"] {
+  bottom: -2px;
+  left: -2px;
+  cursor: nesw-resize;
+}
+/* The ridged grip glyph in the bottom-right corner. */
+.handle[data-edge="se"]::after {
+  content: "";
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  width: 11px;
+  height: 11px;
+  background: linear-gradient(
+    135deg,
+    transparent 0 45%,
+    var(--c-highlight) 45% 50%,
+    var(--c-shadow) 50% 60%,
+    transparent 60% 65%,
+    var(--c-highlight) 65% 70%,
+    var(--c-shadow) 70% 80%,
+    transparent 80% 85%,
+    var(--c-highlight) 85% 90%,
+    var(--c-shadow) 90%
+  );
+  pointer-events: none;
+}

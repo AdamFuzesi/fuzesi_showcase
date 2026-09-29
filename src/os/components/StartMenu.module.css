@@ -1,0 +1,32 @@
+.root {
+  position: absolute;
+  left: 2px;
+  bottom: calc(var(--taskbar-h) - 3px);
+  z-index: var(--z-menu);
+  min-width: 200px;
+}
+
+.banner {
+  width: 22px;
+  margin-right: 2px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 6px;
+  background: linear-gradient(0deg, var(--c-title-active-a), var(--c-title-active-b));
+}
+
+.bannerText {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: var(--c-face);
+  /* The bitmap UI font only renders crisply at 11px; the banner uses a vector face like the era did. */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+.bannerText b {
+  color: var(--c-highlight);
+}

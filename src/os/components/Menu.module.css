@@ -1,0 +1,90 @@
+.menu {
+  position: relative;
+  display: flex;
+  padding: 3px;
+  background: var(--c-face);
+  box-shadow: var(--bevel-window);
+  min-width: 150px;
+}
+
+.list {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  position: relative;
+}
+
+.entry {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 20px;
+  padding: 0 var(--s-2) 0 0;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.menu[data-size="large"] > .list > .item > .entry {
+  height: 38px;
+}
+
+.entry:hover,
+.entry:focus-visible,
+.entry[data-open="true"] {
+  background: var(--c-select);
+  color: var(--c-select-text);
+  outline: none;
+}
+.entry[aria-disabled="true"] {
+  color: var(--c-text-disabled);
+  text-shadow: 1px 1px 0 var(--c-highlight);
+}
+.entry[aria-disabled="true"]:hover {
+  background: none;
+}
+
+.iconSlot {
+  width: 24px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.menu[data-size="large"] > .list > .item > .entry .iconSlot {
+  width: 44px;
+}
+
+.label {
+  flex: 1;
+  padding-right: var(--s-6);
+}
+
+/* Solid right-pointing triangle, drawn in pixels. */
+.arrow {
+  width: 4px;
+  height: 7px;
+  background: currentColor;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.separator {
+  height: 2px;
+  margin: 3px 1px;
+  box-shadow: inset 0 1px var(--c-shadow), inset 0 -1px var(--c-highlight);
+}
+
+.submenu {
+  position: absolute;
+  left: calc(100% - 3px);
+  top: -3px;
+  z-index: 1;
+}
+.submenu[data-flip="true"] {
+  left: auto;
+  right: calc(100% - 3px);
+}

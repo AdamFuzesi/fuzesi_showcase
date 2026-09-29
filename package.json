@@ -1,48 +1,31 @@
 {
-    "name": "react-portfolio",
-    "version": "0.1.0",
-    "private": true,
-    "dependencies": {
-        "@emailjs/browser": "^4.4.1",
-        "bootstrap": "^5.2.3",
-        "emailjs-com": "^3.2.0",
-        "react": "^18.2.0",
-        "react-bootstrap": "^2.7.0",
-        "react-dom": "^18.2.0",
-        "react-helmet-async": "^1.0.7",
-        "react-icons": "^4.1.0",
-        "react-router-dom": "^6.6.2",
-        "react-scripts": "^5.0.1",
-        "react-slick": "^0.30.2",
-        "react-transition-group": "^4.4.2",
-        "slick-carousel": "^1.8.1",
-        "typewriter-effect": "^2.18.2",
-        "web-vitals": "^3.1.1"
-    },
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject",
-        "predeploy": "yarn build && cp build/index.html build/404.html",
-        "deploy": "gh-pages -d build"
-    },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    }
+  "name": "adamos-98",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "three": "^0.186.1",
+    "zustand": "^5.0.15"
+  },
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "predeploy": "npm run build && cp build/index.html build/404.html",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@types/three": "^0.186.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "typescript": "~5.9",
+    "vite": "^8.3.1"
+  },
+  "type": "module"
 }

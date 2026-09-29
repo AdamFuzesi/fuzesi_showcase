@@ -1,0 +1,124 @@
+/* Same paper stock as the registration card and the project spec sheet. */
+.stage {
+  position: relative;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--c-paper);
+  box-shadow: var(--bevel-field);
+  isolation: isolate;
+}
+.stage[data-pointing="true"] {
+  cursor: pointer;
+}
+
+/* ---------- Title: static, anchored in the corner the diagonal leaves open ---------- */
+.title {
+  position: absolute;
+  top: 22px;
+  left: 26px;
+  z-index: 6000;
+  pointer-events: none;
+}
+.display {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 46px;
+  line-height: 0.92;
+  letter-spacing: -1.5px;
+  color: transparent;
+  -webkit-text-stroke: 1.1px var(--c-dark);
+}
+@supports not (-webkit-text-stroke: 1px black) {
+  .display {
+    color: var(--c-dark);
+  }
+}
+
+/* ---------- The stream: logos only ---------- */
+.stream {
+  position: absolute;
+  inset: 0;
+}
+
+/* Positioned by its centre: JS translates the slot to the path point and scales it for depth. */
+.slot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  will-change: transform, opacity;
+  --depth: 0;
+  --inv: 1;
+}
+
+.logo {
+  position: absolute;
+  left: -62px;
+  top: -62px;
+  width: 124px;
+  height: 124px;
+  max-width: none; /* the slot is a zero-size anchor; don't let the global img rule squash this */
+  object-fit: contain;
+  user-select: none;
+  /* A contact shadow that follows the logo's own silhouette and deepens as it nears. */
+  filter: drop-shadow(0 calc(2px + var(--depth) * 8px) calc(2px + var(--depth) * 7px) rgba(0, 0, 0, calc(0.06 + var(--depth) * 0.2)));
+  /* Only transform transitions: the filter changes every frame, so transitioning it would smear. */
+  transition: transform 460ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Hover: the logo springs forward with a deeper shadow; the line keeps flowing underneath it. */
+.slot[data-hover] .logo {
+  transform: translateY(-7px) scale(1.32);
+  filter: drop-shadow(0 12px 10px rgba(0, 0, 0, 0.26));
+}
+
+/* The label is counter-scaled (--inv) so it reads at the same size at any depth. */
+.labelAnchor {
+  position: absolute;
+  left: 0;
+  bottom: 84px;
+  transform: translateX(-50%) scale(var(--inv));
+  transform-origin: 50% 100%;
+  pointer-events: none;
+}
+.label {
+  display: block;
+  padding: 4px 9px 5px;
+  background: #121212;
+  color: #fff;
+  white-space: nowrap;
+  box-shadow: 0 6px 14px -6px rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 200ms ease,
+    transform 320ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.label::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 8px;
+  height: 4px;
+  transform: translateX(-50%);
+  background: #121212;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+.slot[data-hover] .label {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 60ms;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

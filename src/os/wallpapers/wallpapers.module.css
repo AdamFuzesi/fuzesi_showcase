@@ -1,0 +1,51 @@
+.fill {
+  position: absolute;
+  inset: 0;
+}
+
+/* Centred photo on the desktop colour, like a real "Center" wallpaper setting. */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 78%;
+  width: auto;
+  max-width: none;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+}
+
+.dither {
+  background-color: var(--c-desktop);
+  background-image: conic-gradient(#006a6a 25%, transparent 0 50%, #006a6a 0 75%, transparent 0);
+  background-size: 4px 4px;
+}
+
+.blueprint {
+  background-color: #0a3a78;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.18) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 64px 64px, 64px 64px, 16px 16px, 16px 16px;
+}
+
+/* Hard-stepped gradient: banded like a 256-colour display would render it. */
+.dusk {
+  background: linear-gradient(
+    180deg,
+    #10183c 0 12%,
+    #1c2458 12% 24%,
+    #34306c 24% 36%,
+    #583a78 36% 48%,
+    #8a4672 48% 58%,
+    #c05a5a 58% 66%,
+    #e8864a 66% 72%,
+    #0c1a2c 72% 100%
+  );
+}
+
+.solid {
+  background: var(--c-desktop);
+}

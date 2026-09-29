@@ -1,0 +1,91 @@
+/*
+ * AdamOS 98 design tokens.
+ * Every colour, bevel and metric in the UI comes from here, so a theme (or a three.js scene that
+ * wants to match the chrome) only has to read/override these custom properties.
+ */
+@font-face {
+  font-family: "AdamOS Sans";
+  src: url("../../assets/fonts/ms_sans_serif.woff2") format("woff2");
+  font-weight: 400;
+  font-display: block;
+}
+@font-face {
+  font-family: "AdamOS Sans";
+  src: url("../../assets/fonts/ms_sans_serif_bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: block;
+}
+
+:root {
+  /* Fixed internal resolution (16:10). <Screen> zooms this to fit the iframe. */
+  --screen-w: 1024px;
+  --screen-h: 640px;
+  --taskbar-h: 30px;
+
+  /* Palette */
+  --c-face: #c0c0c0;
+  --c-face-light: #dfdfdf;
+  --c-highlight: #ffffff;
+  --c-shadow: #808080;
+  --c-dark: #000000;
+  --c-text: #000000;
+  --c-text-disabled: #808080;
+  --c-window: #ffffff;
+  --c-select: #000080;
+  --c-select-text: #ffffff;
+  --c-desktop: #008080;
+  --c-tooltip: #ffffe1;
+  --c-link: #0000ee;
+
+  --c-title-active-a: #000080;
+  --c-title-active-b: #1084d0;
+  --c-title-inactive-a: #808080;
+  --c-title-inactive-b: #b5b5b5;
+  --c-title-text: #ffffff;
+  --c-title-text-inactive: #dfdfdf;
+
+  /* Brand accents (start mark, boot splash) */
+  --c-brand: #008080;
+  --c-brand-accent: #f0a000;
+
+  /* Paper stock for sheets and rails, and the blue pencil that marks a selection */
+  --c-paper: #fbfaf5;
+  --c-pencil: #1f5fd6;
+  --c-studio: #ffffff; /* product-shot backdrop behind the 3D phones */
+
+  /* Type */
+  --font-ui: "AdamOS Sans", Tahoma, Verdana, "Segoe UI", sans-serif;
+  --font-mono: "Courier New", Courier, monospace;
+  /* Vector display face for large type — the bitmap UI font only renders crisply at 11px. */
+  --font-display: "Arial Black", "Arial Bold", Gadget, Arial, sans-serif;
+  --font-size: 11px;
+
+  /* Spacing (4px grid, with the 2px half-step bevels need) */
+  --s-1: 2px;
+  --s-2: 4px;
+  --s-3: 6px;
+  --s-4: 8px;
+  --s-5: 12px;
+  --s-6: 16px;
+
+  /* Bevels — two-pixel inset box-shadows, the classic 3D chrome */
+  --bevel-raised:
+    inset -1px -1px var(--c-dark), inset 1px 1px var(--c-highlight),
+    inset -2px -2px var(--c-shadow), inset 2px 2px var(--c-face-light);
+  --bevel-pressed:
+    inset -1px -1px var(--c-highlight), inset 1px 1px var(--c-dark),
+    inset -2px -2px var(--c-face-light), inset 2px 2px var(--c-shadow);
+  --bevel-field:
+    inset -1px -1px var(--c-highlight), inset 1px 1px var(--c-shadow),
+    inset -2px -2px var(--c-face-light), inset 2px 2px var(--c-dark);
+  --bevel-status: inset -1px -1px var(--c-highlight), inset 1px 1px var(--c-shadow);
+  --bevel-window:
+    inset -1px -1px var(--c-dark), inset 1px 1px var(--c-face-light),
+    inset -2px -2px var(--c-shadow), inset 2px 2px var(--c-highlight);
+  --bevel-default-button: 0 0 0 1px var(--c-dark);
+
+  --z-desktop: 0;
+  --z-windows: 10;
+  --z-taskbar: 5000;
+  --z-menu: 6000;
+}
