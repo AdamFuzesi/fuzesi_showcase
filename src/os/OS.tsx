@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { APPS, appIcon, appTitle } from "./apps/manifest";
 import { APP_COMPONENTS } from "./apps/registry";
 import { Desktop } from "./components/Desktop";
@@ -10,9 +9,7 @@ import { useOS } from "./store";
 export function OS() {
   const order = useOS((st) => st.order);
   const windows = useOS((st) => st.windows);
-
-  // Land on the desktop with About open. `open` is idempotent, so StrictMode's double run is harmless.
-  useEffect(() => useOS.getState().open("about"), []);
+  // No window opens on launch: AdamOS starts on the bare desktop.
 
   return (
     <Screen>
