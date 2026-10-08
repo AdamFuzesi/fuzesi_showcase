@@ -1,10 +1,9 @@
-import { lazy, Suspense, useRef, useState, type KeyboardEvent } from "react";
+import { Suspense, useRef, useState, type KeyboardEvent } from "react";
 import { jobs, type Job } from "../../../content";
 import { useScreen } from "../../Screen";
+// Shared, prefetched-on-idle loader for the three.js stage (see three/preload.ts).
+import { ModelStage } from "../../three/preload";
 import s from "./Work.module.css";
-
-// three.js only loads once the Work tab is open.
-const ModelStage = lazy(() => import("../../three/ModelStage"));
 
 /** "05/2024 - 09/2024" → "2024"; "05/2025 - 01/2026" → "2025–26"; "03/2026 - Present" → "2026–Now". */
 const yearsOf = (dates: string) => {

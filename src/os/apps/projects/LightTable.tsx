@@ -1,13 +1,12 @@
-import { lazy, Suspense, useEffect, useMemo, useRef, useState, type KeyboardEvent } from "react";
+import { Suspense, useEffect, useMemo, useRef, useState, type KeyboardEvent } from "react";
 import { projects, type Project } from "../../../content";
 import { useScreen } from "../../Screen";
 import type { DeviceKind } from "../../three/DeviceStage";
+// Shared, prefetched-on-idle loader for the three.js stage (see three/preload.ts).
+import { DeviceStage } from "../../three/preload";
 import { useOS } from "../../store";
 import { Button, LinkButton, StatusBar } from "../../ui";
 import s from "./LightTable.module.css";
-
-// three.js only loads once the light table is open.
-const DeviceStage = lazy(() => import("../../three/DeviceStage"));
 
 const frameNo = (i: number) => String(i + 1).padStart(2, "0");
 
@@ -156,8 +155,9 @@ function Viewer({ project }: { project: Project }) {
   const screen = project.screen ?? project.display;
   return (
     <figure className={s.viewer}>
-      {/* Keyed by device: switching projects on the same device just swaps the screen texture. */}
-      <Suspense fallback={null}>
+      {/* Keyed by device: switching projects on the same device just swaps the screen texture.
+          If the 3D code hasn't arrived yet, the flat screenshot holds the space instead of a blank. */}
+      <Suspense fallback={<img className={s.placeholder} src={project.hero} alt="" decoding="async" />}>
         <DeviceStage key={device} device={device} screen={screen} scale={scale} alt={project.name} />
       </Suspense>
     </figure>

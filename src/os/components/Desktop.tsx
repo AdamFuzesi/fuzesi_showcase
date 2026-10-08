@@ -3,6 +3,7 @@ import type { AppId } from "../apps/manifest";
 import { PixelIcon } from "../icons/PixelIcon";
 import type { IconName } from "../icons/sprites";
 import { useOS } from "../store";
+import { preloadStages } from "../three/preload";
 import { getWallpaper } from "../wallpapers";
 import s from "./Desktop.module.css";
 
@@ -11,6 +12,9 @@ interface Shortcut {
   label: string;
   icon: IconName;
 }
+
+/** Windows that render a three.js stage — pointing at their icon starts loading it. */
+const USES_3D = new Set<AppId>(["projects", "experience"]);
 
 export const SHORTCUTS: Shortcut[] = [
   { app: "about", label: "About Me", icon: "computer" },
@@ -65,9 +69,13 @@ export function Desktop() {
               e.stopPropagation();
               setSelected(sc.app);
             }}
+            onPointerEnter={() => USES_3D.has(sc.app) && preloadStages()}
             onDoubleClick={() => open(sc.app)}
             onKeyDown={(e) => onIconKey(e, i)}
-            onFocus={() => setSelected(sc.app)}
+            onFocus={() => {
+              setSelected(sc.app);
+              if (USES_3D.has(sc.app)) preloadStages();
+            }}
           >
             <span className={s.glyph}>
               <PixelIcon name={sc.icon} size={32} />

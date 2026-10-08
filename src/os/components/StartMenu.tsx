@@ -1,10 +1,14 @@
 import { projects } from "../../content";
 import { useOS } from "../store";
+import { preloadStages } from "../three/preload";
+import { useEffect } from "react";
 import { Menu, type MenuEntry } from "./Menu";
 import s from "./StartMenu.module.css";
 
 export function StartMenu() {
   const { open, setStartOpen } = useOS.getState();
+  // Opening Start is a strong hint a window is next; most of them are 3D.
+  useEffect(preloadStages, []);
 
   const items: MenuEntry[] = [
     { label: "About Me", icon: "computer", onSelect: () => open("about") },

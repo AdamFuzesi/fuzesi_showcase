@@ -16,7 +16,8 @@
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "predeploy": "npm run build && cp build/index.html build/404.html",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "images": "node scripts/optimize-images.mjs"
   },
   "devDependencies": {
     "@types/node": "^26.6.3",

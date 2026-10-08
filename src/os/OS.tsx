@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { APPS, appIcon, appTitle } from "./apps/manifest";
 import { APP_COMPONENTS } from "./apps/registry";
 import { Desktop } from "./components/Desktop";
@@ -5,11 +6,16 @@ import { Taskbar } from "./components/Taskbar";
 import { Window } from "./components/Window";
 import { Screen } from "./Screen";
 import { useOS } from "./store";
+import { preloadStages, whenIdle } from "./three/preload";
 
 export function OS() {
   const order = useOS((st) => st.order);
   const windows = useOS((st) => st.windows);
   // No window opens on launch: AdamOS starts on the bare desktop.
+
+  // Warm the 3D windows once the desktop has painted and the browser is idle, so opening Projects or
+  // Experience never waits on a download.
+  useEffect(() => whenIdle(preloadStages), []);
 
   return (
     <Screen>
