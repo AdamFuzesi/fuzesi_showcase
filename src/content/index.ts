@@ -109,7 +109,11 @@ const media = (path: string): Media => {
 export const profile: Profile = raw.profile;
 export const meta: { title: string; description: string } = raw.meta;
 export const intro: { title: string; animated: Record<string, string>; description: string } = raw.introdata;
-export const aboutMe: string = raw.dataabout.aboutme;
+export const aboutMe = raw.dataabout as {
+  headline: string;
+  stats: { value: string; label: string }[];
+  sections: { label: string; text: string }[];
+};
 export const contact = raw.contactConfig as {
   MY_EMAIL: string;
   MY_ALTEMAIL: string;
