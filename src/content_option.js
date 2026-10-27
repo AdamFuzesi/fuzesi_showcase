@@ -74,44 +74,19 @@ const introdata = {
 
 const dataabout = {
     title: "A bit about myself...",
-    headline: "I design it, build it, and ship it. Two of my products have been acquired or incubated, and one now runs AI agents that start businesses on their own.",
-    // Headline numbers, pulled from the sections below.
-    stats: [
-        { value: "24K+", label: "FirstIN downloads" },
-        { value: "$300K+", label: "Processed before acquisition" },
-        { value: "0.5% → 6%", label: "Locus onboarding conversion" },
-        { value: "12", label: "Hackathons won" },
-    ],
-    // About Me tab, in reading order: a short label beside each paragraph.
-    sections: [
-        {
-            label: "Who",
-            text: "I’m Adam, a design engineer and final-year CS student at Dalhousie (minors in Math and Econ). I work across the full stack and the full design process, so what I design is what ships.",
-        },
-        {
-            label: "Now",
-            text: "Right now I’m the Lead Full-Stack and Design Engineer at Locus (YC F25), where we build AI agents that launch and run internet businesses autonomously. I own the payments and metering layer that every agent call runs through. I also built the conversational agent layer across iMessage, Telegram, and web, and reworked onboarding, which took conversion from 0.5% to 6%.",
-        },
-        {
-            label: "Before",
-            text: "Before Locus, I co-founded FirstIN, a ticketing platform that reached 24K+ downloads and $300K+ in transactions before it was acquired. While studying AI at Korea University, I built Yorigo. It won HackSeoul, was incubated by NAVER, and climbed to #32 on the Korean App Store. I took both products from Figma to production myself, covering the customer app, staff app, analytics dashboard, and marketing site.",
-        },
-        {
-            label: "Wins",
-            text: "I’ve also won 12 hackathons, including ETHDenver, Hack the North, and Anthropic’s AI Summit in Korea, for $20K+ in prizes. I’ve interned at Accenture (on the American Express team), ResMed, and DeepSense.",
-        },
-        {
-            label: "Next",
-            text: "The first software I ever shipped was a set of tools for my mom’s coffee shop. Next, I want to build fintech that doesn’t overwhelm the people who need it most.",
-        },
-        {
-            label: "Off hours",
-            text: "Outside of work, I play competitive tennis (12+ years, varsity), surf, shoot photos, and play piano.",
-        },
+    headline: "I design it, build it, and ship it.",
+    // About Me tab, in reading order.
+    paragraphs: [
+        "I’m Adam, a design engineer and final-year CS student at Dalhousie (minors in Math and Econ). I work across the full stack and the full design process, so what I design is what ships.",
+        "Right now I’m the Lead Full-Stack and Design Engineer at Locus (YC F25), where we build AI agents that launch and run internet businesses autonomously. I own the payments and metering layer that every agent call runs through. I also built the conversational agent layer across iMessage, Telegram, and web, and reworked onboarding, which took conversion from 0.5% to 6%.",
+        "Before Locus, I co-founded FirstIN, a ticketing platform that reached 24K+ downloads and $300K+ in transactions before it was acquired. While studying AI at Korea University, I built Yorigo. It won HackSeoul, was incubated by NAVER, and climbed to #32 on the Korean App Store. I took both products from Figma to production myself, covering the customer app, staff app, analytics dashboard, and marketing site.",
+        "I’ve also won 12 hackathons, including ETHDenver, Hack the North, and Anthropic’s AI Summit in Korea, for $20K+ in prizes. I’ve interned at Accenture (on the American Express team), ResMed, and DeepSense.",
+        "The first software I ever shipped was a set of tools for my mom’s coffee shop. Next, I want to build fintech that doesn’t overwhelm the people who need it most.",
+        "Outside of work, I play competitive tennis (12+ years, varsity), surf, shoot photos, and play piano.",
     ],
 };
 // The legacy About page reads one block of text.
-dataabout.aboutme = dataabout.sections.map((section) => section.text).join(" ");
+dataabout.aboutme = dataabout.paragraphs.join(" ");
 
 /**
  * Work history, newest first. Shown in Experience & Background → Work.

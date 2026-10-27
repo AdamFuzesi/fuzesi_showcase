@@ -111,8 +111,7 @@ export const meta: { title: string; description: string } = raw.meta;
 export const intro: { title: string; animated: Record<string, string>; description: string } = raw.introdata;
 export const aboutMe = raw.dataabout as {
   headline: string;
-  stats: { value: string; label: string }[];
-  sections: { label: string; text: string }[];
+  paragraphs: string[];
 };
 export const contact = raw.contactConfig as {
   MY_EMAIL: string;
