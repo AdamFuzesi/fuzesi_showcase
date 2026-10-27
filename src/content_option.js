@@ -43,7 +43,7 @@ const meta = {
 const profile = {
     name: "Adam C. Fuzesi",
     shortName: "Adam",
-    headline: "Final-year Computer Science student at Dalhousie University (graduating 2026), minor in Mathematics and Economics.",
+    headline: "Dalhousie University Computer Science alum, minors in Mathematics and Economics, and Korea University alum.",
     // About Me → General: the print on the registration card (4:5 crop of IMG_3066).
     portrait: "/images/os/portrait.jpg",
     // Labelled facts on the registration card, in display order.
@@ -65,7 +65,7 @@ const introdata = {
         second: "Ex SWE @American Express",
         third: "Google Cloud Certified",
         fourth: "Hungarian/Canadian",
-        fifth: "BCS student minoring in Mathematics"
+        fifth: "Dalhousie & Korea University alum"
     },
     description: "Get to know a little about me...",
     intro_img_url: "/images/evenBetterStudious.png",
